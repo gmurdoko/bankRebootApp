@@ -20,11 +20,11 @@
         android:label="fragment_user_detail"
         tools:layout="@layout/fragment_user_detail" >
         <action
-            android:id="@+id/action_userDetailFragment_to_userTansferAmountFragment"
-            app:destination="@id/userTansferAmountFragment" />
-        <action
             android:id="@+id/action_userDetailFragment_to_userTransactionHistoryFragment"
             app:destination="@id/userTransactionHistoryFragment" />
+        <action
+            android:id="@+id/action_userDetailFragment_to_userTransferToFragment"
+            app:destination="@id/userTransferToFragment" />
     </fragment>
     <fragment
         android:id="@+id/userTransferToFragment"
@@ -32,8 +32,8 @@
         android:label="fragment_user_transfer_to"
         tools:layout="@layout/fragment_user_transfer_to" >
         <action
-            android:id="@+id/action_userTransferToFragment_to_userTransferDoneFragment"
-            app:destination="@id/userTransferDoneFragment" />
+            android:id="@+id/action_userTransferToFragment_to_userTansferAmountFragment"
+            app:destination="@id/userTansferAmountFragment" />
     </fragment>
     <fragment
         android:id="@+id/userTransferDoneFragment"
@@ -51,8 +51,8 @@
         android:label="fragment_user_tansfer_amount"
         tools:layout="@layout/fragment_user_tansfer_amount" >
         <action
-            android:id="@+id/action_userTansferAmountFragment_to_userTransferToFragment"
-            app:destination="@id/userTransferToFragment" />
+            android:id="@+id/action_userTansferAmountFragment_to_userTransferDoneFragment"
+            app:destination="@id/userTransferDoneFragment" />
     </fragment>
     <fragment
         android:id="@+id/userTransactionHistoryFragment"
