@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.bank_reboot.screen.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.example.bank_reboot.domain.user.fragment.UserDetailFragment"
+        android:label="fragment_user_detail"
+        tools:layout="@layout/fragment_user_detail" >
+        <action
+            android:id="@+id/action_userDetailFragment_to_userTansferAmountFragment"
+            app:destination="@id/userTansferAmountFragment" />
+        <action
+            android:id="@+id/action_userDetailFragment_to_userTransactionHistoryFragment"
+            app:destination="@id/userTransactionHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userTransferToFragment"
+        android:name="com.example.bank_reboot.domain.user.fragment.UserTransferToFragment"
+        android:label="fragment_user_transfer_to"
+        tools:layout="@layout/fragment_user_transfer_to" >
+        <action
+            android:id="@+id/action_userTransferToFragment_to_userTransferDoneFragment"
+            app:destination="@id/userTransferDoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userTransferDoneFragment"
+        android:name="com.example.bank_reboot.domain.user.fragment.UserTransferDoneFragment"
+        android:label="fragment_user_transfer_done"
+        tools:layout="@layout/fragment_user_transfer_done" >
+        <action
+            android:id="@+id/action_userTransferDoneFragment_pop"
+            app:popUpTo="@id/userTransferDoneFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/userTansferAmountFragment"
+        android:name="com.example.bank_reboot.domain.user.fragment.UserTansferAmountFragment"
+        android:label="fragment_user_tansfer_amount"
+        tools:layout="@layout/fragment_user_tansfer_amount" >
+        <action
+            android:id="@+id/action_userTansferAmountFragment_to_userTransferToFragment"
+            app:destination="@id/userTransferToFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userTransactionHistoryFragment"
+        android:name="com.example.bank_reboot.domain.user.fragment.UserTransactionHistoryFragment"
+        android:label="fragment_user_transaction_history"
+        tools:layout="@layout/fragment_user_transaction_history" />
+</navigation>
