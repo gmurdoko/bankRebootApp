@@ -8,8 +8,8 @@ import retrofit2.http.POST
 
 interface TransactionAPI {
 
-    @GET("tansactions")
-    fun getAllTransaction():Call<List<Transaction>>
+    @GET("transactions")
+    fun getAllTransaction():Call<Any>
 
     @POST("transaction")
     fun createTransaction(@Body transaction: Transaction): Call<Transaction>

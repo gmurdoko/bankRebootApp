@@ -1,5 +1,7 @@
 package com.example.bank_reboot.domain.user.fragment
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -44,5 +46,12 @@ class UserDetailFragment : Fragment() {
         transfer_to_button.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.action_userDetailFragment_to_userTransferToFragment)
         }
+//        call_button.setOnClickListener{
+//            onCall()
+//        }
+
     }
+//    fun onCall(){
+//
+//    }
 }
